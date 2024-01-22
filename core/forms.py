@@ -1,9 +1,9 @@
 from django import forms
+from core.models import Cadastro
 
-class CadastrarForm(forms.Form):
-    nome = forms.CharField(label= 'Nome')
-    idade = forms.IntegerField(label= 'Idade')
-    sexo = forms.CharField(label= 'Sexo')
-    cpf = forms.CharField(label='CPF')
-    profissao = forms.CharField(label='Profissão')
-    email = forms.EmailField(label= 'E-mail')
+class CadastrarForm(forms.ModelForm):
+    
+    class Meta:
+        model = Cadastro
+        fields =['nome','idade','sexo','cpf','profissao']
+            

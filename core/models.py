@@ -5,6 +5,8 @@ class Cadastro(models.Model):
     PREFERENCIA_SEXO_OPCOES =(
         ('M','Masculino'),
         ('F','Feminino'),
+        ('O','Outros'),
+        
     )
     
     PREFERENCIA_PROFISSAO_POCAO=(
@@ -16,7 +18,7 @@ class Cadastro(models.Model):
     )
     
     nome = models.CharField(verbose_name='Nome',max_length=200)
-    idade = models.IntegerField(verbose_name='Idade')
+    idade = models.CharField(verbose_name='Idade',max_length=10)
     sexo = models.CharField(verbose_name='Sexo',max_length=20,
                             choices=PREFERENCIA_SEXO_OPCOES
     )
