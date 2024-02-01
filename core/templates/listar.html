@@ -1,0 +1,12 @@
+{% extends 'base.html '%}
+{% load bootstrap5 %}
+
+{% block conteudo %}
+{% for pessoa in pessoas %}
+<ul>
+    <li>{{pessoa.id}}:  {{pessoa.nome}} profissão : {{pessoa.profissao}}</li>
+
+</ul>
+{% endfor %}
+
+{% endblock %}

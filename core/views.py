@@ -19,3 +19,7 @@ def cadastro(request):
         contexto['sucesso'] = True
     contexto['form'] = form
     return render(request, 'cadastro.html', contexto)
+
+def listar(request):
+    pessoas = Cadastro.objects.all()
+    return render(request,'listar.html',{"pessoas":pessoas})
