@@ -1,9 +1,10 @@
 from django.shortcuts import render,  redirect
 from core.forms import CadastrarForm 
 from core.models import Cadastro
+from noticia.models import Noticia
 
 def base(request):
-    return render(request, 'base.html')
+    return render(request, 'inicio.html')
 
 
 def inicio(request):
