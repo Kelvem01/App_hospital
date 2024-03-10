@@ -2,5 +2,26 @@
 {% load bootstrap5 %}
 
 {% block conteudo %}
-Tetes
+{% for dado in noticia %}
+<div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">Procedimentos Agendados</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">{{ dado.id}}<small class="text-body-secondary fw-light">{{dado.data_artigo}}</small></h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{ dado.nome_artigo }}</li>
+          
+        </ul>
+        <button type="button" class="w-100 btn btn-lg btn-outline-primary">{{dado.artigo}}</button>
+      </div>
+    </div>
+  </div>
+    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+      </div>
+      <div class="card-body">
+    </div>
+  </div>
+{% endfor%}
 {% endblock %}

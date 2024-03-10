@@ -24,3 +24,7 @@ def cadastro(request):
 def listar(request):
     pessoas = Cadastro.objects.all()
     return render(request,'listar.html',{"pessoas":pessoas})
+
+def noticias(request):
+    noticia = Noticia.objects.all()
+    return render(request,'noticia.html',{"noticia":noticia})
